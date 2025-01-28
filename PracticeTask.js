@@ -34,7 +34,12 @@ setTimeout(()=>{
 // Practice Task - 3
 
 const jocke = async () =>{
-    const res = await fetch('https://v2.jokeapi.dev/joke/Programming?type=single');
-    const data = await res.json(); 
-    console.log(data);
+    try{
+        const res = await fetch('https://v2.jokeapi.dev/joke/Programming?type=single');
+        const data = await res.json(); 
+        console.log(data);
+    }
+    catch{
+        
+    }
 }
