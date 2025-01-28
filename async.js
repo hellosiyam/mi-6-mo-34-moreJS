@@ -1,20 +1,47 @@
-console.log(1);
-console.log(2);
-console.log(3);
-setTimeout(()=>{
-    console.log("arrow function");
-}, 4000)
-async()
-console.log(5);
-console.log(6);
-console.log(7);
-console.log(8);
+// const myLoder = () =>{
+//     return new Promise ((resolbe, reject) =>{
+//         const sucess = Math.random()
+//         if (sucess >= 0.4) {
+//             resolbe( sucess) //'This value is sucess',
+//         }
+//         else{
+//             reject(  sucess) //'This value is reject',
+//         }
+//     })
+// }
 
-function async() {
-    console.log(4);
+// const { log } = require("async");
+
+const myLoder = () => {
+    return new Promise((resolve, reject) => {
+        const sucess = Math.random();
+        if (sucess <= 0.55) {
+            resolve(sucess)
+        }else{
+            reject(sucess)
+        }
+    })
 }
 
+myLoder()
+.then(data => console.log('resolve Data', data))
+.catch(error => console.error('error data', error))
 
-setTimeout(()=>{
-    console.log('Time out is set');
-}, 2000)
+
+async function loadData() {
+    const res = await fetch('');
+    const data = await res.json();
+    console.log(data);
+    
+}
+
+loadData();
+
+const shortData = async () => {
+    const res = await fetch('');
+    const data = await res.json();
+    console.log(data);
+    
+}
+
+shortData();
