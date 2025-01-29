@@ -1,6 +1,6 @@
 // Practice Task - 1
 
-Task-a 
+// Task-a 
 setTimeout(()=>{
     console.log('Hello');
     
